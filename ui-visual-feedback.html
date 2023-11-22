@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <style>
+        body {
+            background-color: #234;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .payment {
+            margin: 100px auto 0 auto;
+            border: 2px solid orange;
+            width: 600px;
+            font-size: 24px;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-radius: 10px;
+        }
+        .payment-top {
+            text-align: center;
+            padding: 10px;
+            color: white;
+            background-color: #123;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .payment-close {
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 26px;
+            float: right;
+        }
+        .payment-main {
+            background-color: white;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        .payment-main-top {
+            text-align: center;
+            
+        }
+        .payment-main-top span {
+            display: block;
+        }
+        .payment-main-left {
+            width: 250px;
+            margin-left: 50px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .payment-main-right {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+        .payment-table {
+            margin-top: 10px;
+            border-spacing: 0;
+        }
+        .payment-table tr td:first-child {
+            padding-bottom: 3px;
+            
+        }
+        .payment-table tr:nth-child(odd) {
+            background-color: gray;
+            color: white;
+            
+        }
+        .payment-main-footer {
+            margin-top: 20px;
+            margin-left: 50px;
+            height: 48px;
+            vertical-align: top;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        .btn {
+            align-items: center;
+            height: 25px;
+            width: 120px;
+            background-color: gray;
+            border-radius: 5px;
+            color: white;
+            border: 2px solid gray;
+            opacity: 0.3;
+        }
+        input:checked + input {
+            opacity: 1;
+        }
+        input:checked + input:hover {
+            background-color: white;
+            color: gray;
+            cursor: pointer;
+        }
+        input:checked + input[type="submit"]:active {
+            outline: 3px solid orange;
+        }
+
+        input:checked + input[type="submit"]:active + img{
+            opacity: 1;
+        }
+        .payment-main-footer img {
+            vertical-align: middle;
+            opacity:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment">
+        <div class="payment-top">
+            <span>Shop.md</span> <span title="Close" class="payment-close">✖</span>
+        </div>
+        <div class="payment-main">
+            <div class="payment-main-top">
+                <span>Information about cart:</span>
+                <img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-3/32/payment-card-icon.png">
+                <img src="https://icons.iconarchive.com/icons/iconshock/credit-card/32/mastercard-icon.png">
+            </div>
+            <div class="payment-info">
+                <form action="#">
+                    <div class="payment-main-left">
+                        <label for="card">Number of card</label>
+                        <input id="card" type="text" required placeholder="XXXX XXXX XXXX XXXX">
+                        <label for="mounth">Validity</label>
+                        <select required id="mounth">
+                            <option value="">Mounth</option>
+                            <option value="">02 January</option>
+                            <option value="">01 December</option>
+                            <option value="">03 February</option>
+                            <option value="">04 March</option>
+                            <option value="">05 April</option>
+                            <option value="">06 May</option>
+                            <option value="">07 June</option>
+                            <option value="">08 July</option>
+                            <option value="">09 August</option>
+                            <option value="">10 September</option>
+                            <option value="">11 October </option>
+                            <option value="">12 November </option>
+                        </select>
+                        <select required>
+                            <option value="">Year</option>
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                            <option value="">2023</option>
+                            <option value="">2024</option>
+                            <option value="">2025</option>
+                            <option value="">2026</option>
+                            <option value="">2027</option>
+                            <option value="">2028</option>
+                            <option value="">2029</option>
+                            <option value="">2030</option>
+                        </select>
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" required maxlength="3" width="10px" size="3px">
+                    </div>
+                    <div class="payment-main-right">
+                        <span>Purchase information</span>
+                        <table class="payment-table">
+                            <tr>
+                                <td>Sum :</td>
+                                <td>32798</td>
+                            </tr>
+                            <tr>
+                                <td>Currency :</td>
+                                <td>MDL</td>
+                            </tr>
+                            <tr>
+                                <td>Order Description:</td>
+                                <td>Apple iPhone 11</td>
+                            </tr>
+                            <tr>
+                                <td>Company name:</td>
+                                <td>Shop.md</td>
+                            </tr>
+                            <tr>
+                                <td>Company website URL:</td>
+                                <td><a href="#"></a>https://shop.md</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="payment-main-footer">
+                           <input type="checkbox">I agree with the Privacy Policy
+                           <input id="btn" class="btn" type="submit" value="Pay" name="">
+                           <img src="https://icons.iconarchive.com/icons/amitjakhu/drip/48/loading-icon.png" alt="">
+                    </div>
+                        
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
